@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-RUN go get github.com/robertkrimen/godocdown/godocdown
+RUN go install github.com/robertkrimen/godocdown/godocdown@latest
 
 COPY entrypoint.sh /entrypoint.sh
 

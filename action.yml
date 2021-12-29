@@ -18,7 +18,7 @@ outputs:
     description: Success execution
 runs:
   using: 'docker'
-  image: Dockerfile
+  image: 'Dockerfile'
   args:
     - ${{ inputs.pkg-source }}
     - ${{ inputs.docs-dest }}

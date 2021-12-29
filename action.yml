@@ -1,0 +1,25 @@
+name: 'Godoc on pull request'
+description: |
+  This Github action creates one or many godoc markdown documentation files for your go code.
+inputs:
+  pkg-source:
+    description: Location of your go code
+    required: true
+  docs-dest:
+    description: Where to put the resulting file.
+    required: false
+    default: docs/
+  filename:
+    description: Name of the resulting file.
+    required: false
+    default: README.md
+outputs:
+  result:
+    description: Success execution
+runs:
+  using: 'docker'
+  image: Dockerfile
+  args:
+    - ${{ inputs.pkg-source }}
+    - ${{ inputs.docs-dest }}
+    - ${{ inputs.filename }}

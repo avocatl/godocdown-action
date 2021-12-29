@@ -8,7 +8,7 @@ inputs:
   docs-dest:
     description: Where to put the resulting file.
     required: false
-    default: docs/
+    default: docs
   filename:
     description: Name of the resulting file.
     required: false
